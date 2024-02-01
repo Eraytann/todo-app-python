@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-wb&xfh-c-2p7hcy5n#ky*#jm2@)st%=!r3n!at0orgi(#6fs7r
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    'todo-app-with-python.onrender.com'
+    '*'
 ]
 
 
@@ -121,14 +121,15 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
 STATICFILES_DIRS = [
     BASE_DIR / "static"
 ]
 
+STATIC_ROOT = BASE_DIR / "staticfiles"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
